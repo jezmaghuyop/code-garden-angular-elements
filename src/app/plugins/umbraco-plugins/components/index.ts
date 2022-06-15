@@ -1,0 +1,1 @@
+export * from './media-gallery/media-gallery.component';

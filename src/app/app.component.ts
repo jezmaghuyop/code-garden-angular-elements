@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'code-garden-demo';
+
+  constructor(){
+    console.log('loaded!');
+  }
 }

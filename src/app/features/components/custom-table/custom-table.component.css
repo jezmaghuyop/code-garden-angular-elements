@@ -1,0 +1,5 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.btn-primary {
+    background-color: #373baa !important;
+}

@@ -1,0 +1,9 @@
+<swiper [config]="config" *ngIf="images.length > 0">
+    <ng-template swiperSlide *ngFor="let img of images; index as i">
+        <div class="swiper-slide-container">
+        <img class="swiper-slide" [src]="img" />
+        </div>
+    </ng-template>
+</swiper>
+
+<button (click)="show()">Test</button>

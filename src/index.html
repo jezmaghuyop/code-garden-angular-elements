@@ -1,13 +1,44 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>CodeGardenDemo</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <style>
+    table {
+      background-color: black !important;
+    }
+  </style>
 </head>
+
 <body>
-  <app-root></app-root>
+  <main-menu></main-menu>
+
+  <div class="d-flex">
+    <custom-table id="angular-table"></custom-table>
+  </div>
+
+
+  <script type="text/javascript">
+    const customTable = document.getElementById("angular-table");
+    customTable.headers = ["Name", "Job", "Location"];
+    customTable.bodyData = [
+      { "name": "Jez Reel", "job": "Technical Advisor", "location": "Norway" },
+      { "name": "John", "job": "Senior Developer", "location": "Philippines" }
+    ];
+    customTable.actions = [{ name: "Edit Profile", action: "Edit" }, { name: "Delete Profile", action: "Delete" }];
+
+    customTable.addEventListener('actionEvent', (data) => {
+      console.log('The Event Triggered is:' + data.detail);
+    });
+
+
+  </script>
+  
 </body>
+
 </html>
