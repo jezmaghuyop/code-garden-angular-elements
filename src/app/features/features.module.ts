@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, Type } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CustomTableComponent } from './components/custom-table/custom-table.component';
 
@@ -11,4 +11,6 @@ import { CustomTableComponent } from './components/custom-table/custom-table.com
     CommonModule
   ]
 })
-export class FeaturesModule { }
+export class FeaturesModule { 
+  customElementComponent: Type<any> = CustomTableComponent;
+}

@@ -6,6 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "elements-compile": "ng build --output-hashing none && node concat.js",
+    "lazy-elements-compile": "ng build --output-hashing none --deploy-url /scripts/elements/ && node concat.js",
+    
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
